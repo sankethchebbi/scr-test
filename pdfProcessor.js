@@ -1,12 +1,10 @@
-// pdfProcessor.js
 import fs from 'fs';
 import pdf from 'pdf-parse';
 import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// Setting up the OpenAI client with Axios
-const apiKey = process.env.OPENAI_API_KEY || "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"; 
+const apiKey = process.env.OPENAI_API_KEY; 
 const client = axios.create({
     headers: {
         'Authorization': `Bearer ${apiKey}`,
